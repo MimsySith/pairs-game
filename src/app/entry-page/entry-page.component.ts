@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cards } from '../cards';
 
 @Component({
   selector: 'app-entry-page',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class EntryPageComponent implements OnInit {
 
   constructor() { }
+
+  Cards = Cards;
 
   ngOnInit(): void {
   }

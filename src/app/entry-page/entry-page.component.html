@@ -1,1 +1,9 @@
-<p>entry-page works!</p>
+<div class="container">
+
+<div *ngFor="let card of Cards" class="big">
+    <div class="border">
+    <p class="text">{{card.name}}</p>
+    <img src={{card.pictureurl}} alt="Card" height="100px" width="100px">
+        </div>
+</div>
+</div>
