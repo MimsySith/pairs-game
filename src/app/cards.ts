@@ -244,5 +244,65 @@ export const beginnerCards = [
     {
         name: 'Card-twelve',
         pictureurl: 'assets/icons/ffffff/000000/1x1/delapouite/beehive.svg'
+    },
+
+    {
+        name: 'Card-one',
+        pictureurl: 'assets/icons/ffffff/000000/1x1/faithtoken/dragon-head.svg'
+    },
+
+    {
+        name: 'Card-two',
+        pictureurl: 'assets/icons/ffffff/000000/1x1/faithtoken/minerals.svg'
+    },
+
+    {
+        name: 'Card-three',
+        pictureurl: 'assets/icons/ffffff/000000/1x1/faithtoken/forward-sun.svg'
+    },
+
+    {
+        name: 'Card-four',
+        pictureurl: 'assets/icons/ffffff/000000/1x1/faithtoken/nautilus-shell.svg'
+    },
+
+    {
+        name: 'Card-five',
+        pictureurl: 'assets/icons/ffffff/000000/1x1/delapouite/air-balloon.svg'
+    },
+
+    {
+        name: 'Card-six',
+        pictureurl: 'assets/icons/ffffff/000000/1x1/faithtoken/ore.svg'
+    },
+
+    {
+        name: 'Card-seven',
+        pictureurl: 'assets/icons/ffffff/000000/1x1/delapouite/abbot-meeple.svg'
+    },
+
+    {
+        name: 'Card-eight',
+        pictureurl: 'assets/icons/ffffff/000000/1x1/delapouite/angry-eyes.svg'
+    },
+
+    {
+        name: 'Card-nine',
+        pictureurl: 'assets/icons/ffffff/000000/1x1/delapouite/ants.svg'
+    },
+
+    {
+        name: 'Card-ten',
+        pictureurl: 'assets/icons/ffffff/000000/1x1/delapouite/arabic-door.svg'
+    },
+
+    {
+        name: 'Card-eleven',
+        pictureurl: 'assets/icons/ffffff/000000/1x1/delapouite/banknote.svg'
+    },
+
+    {
+        name: 'Card-twelve',
+        pictureurl: 'assets/icons/ffffff/000000/1x1/delapouite/beehive.svg'
     }
 ]
