@@ -1,15 +1,38 @@
 .container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     overflow: auto;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
 }
 
 .border{
     border: 1px solid #000000;
-    width: 110px;
+    width: fit-content;
+    height: 165px;
     }
 
 .text{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.small{
+    font-size: 10pt;
+    margin: 10px;
+}
+
+.card{
+    margin: 10px;
+}
+
+.centre{
+    text-align: center;
+}
+
+.header{
+    text-decoration: underline;
 }
 

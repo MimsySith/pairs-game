@@ -1,9 +1,27 @@
 <div class="container">
-
-<div *ngFor="let card of Cards" class="big">
-    <div class="border">
-    <p class="text">{{card.name}}</p>
-    <img src={{card.pictureurl}} alt="Card" height="100px" width="100px">
+    <div class="row">
+        <h1 class="text header centre">Instructions:</h1>
+    </div>
+    <div class="row">
+        <p class="text">This is a game of memory. A selection of cards are presented to you, face down. You turn over the cards
+            two at a time by clicking on them, or using the tab and enter keys on your keyboard. If the cards match, they will
+            remain face up. If not, they will turn over again. You have to remember where the cards are in order to match them.
+            To win, all the cards need to be matched and therefore face up.<br>
+            There are three levels. Beginner has 12 different pairs, Intermediate has 24 different pairs, and Advanced has
+            36 different pairs.
+        </p>
+    </div>
+    
+    <div class="row">
+            <h2 class="text header centre">And here are the cards:</h2>
+    </div>
+    
+    <div class="row">
+        <div *ngFor="let card of Cards">
+            <div class="border" tabindex="0">
+                <p class="text small">{{card.name}}</p>
+                <img class="card" src={{card.pictureurl}} alt="Card" height="70px" width="70px">
+            </div>
         </div>
-</div>
+    </div>
 </div>
