@@ -32,6 +32,9 @@ export class BeginnerLevelComponent implements OnInit {
     if(this.Count===2 && this.cardArray[0] === this.cardArray[1]){
       if(this.cardFlipArray[0] === this.cardFlipArray[2]){
         console.log('that is the same card')
+        this.Count = 0;
+        this.cardArray.length = 0;
+        this.cardFlipArray.length=0;
       } else {
         document.getElementById('hooray')!.innerHTML+='Yay! Those cards match!' + '<br>'
         this.cardFlipArray[0]?.classList.add('matched');
