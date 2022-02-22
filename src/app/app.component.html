@@ -1,12 +1,12 @@
 <div class="container">
   <h1 class="text header">{{title}}</h1>
-  <nav class="nav">
-    <ul>
-      <li><a routerLink="home" routerLinkActive="active">Home</a></li>
-      <li><a routerLink="beginner" routerLinkActive="active">Beginner Level</a></li>
-      <li><a routerLink="intermediate" routerLinkActive="active">Intermediate Level</a></li>
-      <li><a routerLink="expert" routerLinkActive="active">Expert Level</a></li>
-    </ul>
+  <nav class="nav list">
+    
+      <a class="link" routerLink="home" routerLinkActive="active"><div class="list-item">Home</div></a>
+      <a class="link" routerLink="beginner" routerLinkActive="active"><div class="list-item">Beginner Level</div></a>
+      <a class="link" routerLink="intermediate" routerLinkActive="active"><div class="list-item">Intermediate Level</div></a>
+      <a class="link" routerLink="expert" routerLinkActive="active"><div class="list-item">Expert Level</div></a>
+    
   </nav>
 </div>
 <router-outlet></router-outlet>

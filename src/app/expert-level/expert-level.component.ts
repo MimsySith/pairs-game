@@ -14,7 +14,7 @@ export class ExpertLevelComponent implements OnInit {
   newArray = this.shuffle([...this.Cards])
   cardArray = new Array;
   cardFlipArray = new Array;
-  score = 36;
+  score = -36;
   pairs = 36;
 
   constructor() { }
@@ -65,7 +65,7 @@ export class ExpertLevelComponent implements OnInit {
       
 
     if(this.Count === 2){
-      this.score--;
+      this.score++;
       setTimeout(() => {
         this.cardFlipArray[0]?.classList.remove('show');
         this.cardFlipArray[1]?.classList.remove('hide');
@@ -86,7 +86,7 @@ export class ExpertLevelComponent implements OnInit {
 
   if(this.pairs === 0){
     window.alert('Hooray! You\'ve won! Refresh the browser to restart the game.')
-    document.getElementById('score')!.innerHTML='Your final score is (with a higher score being better):  ' + (this.score - this.CheatCount) + '<br>' +
+    document.getElementById('score')!.innerHTML='Your final score is:  ' + (this.score + this.CheatCount) + '<br>' +
     '(A perfect score would be 0) '
   }
 

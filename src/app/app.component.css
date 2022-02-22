@@ -1,0 +1,41 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    background-color: #0000ff;
+    width: 850px;
+  
+
+}
+
+.list{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.link{
+    text-decoration: none;
+    color: #ffffff
+}
+
+
+.list-item{
+    margin: 8px;
+    color: #ffffff;
+    width: 180px;
+    padding: 5px;
+}
+
+
+.list-item:hover{
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    color: #0000ff;   
+}
+
+
+
