@@ -11,11 +11,10 @@
     color: #008000;
 }
 
-.hooray{
-    background: linear-gradient(#008000, #0000b8);
-    color: #ffffff;
-    border-radius: 5px;
+.border{
+    border: 2px solid #00008b
 }
+
 
 .row{
     display: flex;
