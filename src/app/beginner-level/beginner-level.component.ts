@@ -28,8 +28,10 @@ export class BeginnerLevelComponent implements OnInit {
 
   toggle(card: HTMLImageElement, front: HTMLImageElement, url: string, sound: HTMLInputElement){
     if(sound.checked){
-      let turn = new Audio();
-      turn.src='assets/sounds/BeltHit.mp3';
+      //Thanks to Stack Overflow for the method of playing sound in Angular, as it
+      //is slightly different to the method in plain JavaScript
+      let turn = new Audio();   
+      turn.src='assets/sounds/baseball-bat-hit-sound-effect.mp3';
       turn.load();
       turn.play();
     }
@@ -47,6 +49,12 @@ export class BeginnerLevelComponent implements OnInit {
         this.cardArray.length = 0;
         this.cardFlipArray.length=0;
       } else {
+        if(sound.checked){
+          let hooray = new Audio();
+          hooray.src='assets/sounds/Tada-sound.mp3';
+          hooray.load();
+          hooray.play();
+        }
         document.getElementById('hooray')!.innerHTML+='Yay! Those cards match!' + '<br>'
         this.cardFlipArray[0]?.classList.add('matched');
         this.cardFlipArray[2]?.classList.add('matched');

@@ -22,8 +22,15 @@ export class ExpertLevelComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggle(card: HTMLImageElement, front: HTMLImageElement, url: string){
-    
+  toggle(card: HTMLImageElement, front: HTMLImageElement, url: string, sound: HTMLInputElement){
+    if(sound.checked){
+      //Thanks to Stack Overflow for the method of playing sound in Angular, as it
+      //is slightly different to the method in plain JavaScript
+      let turn = new Audio();   
+      turn.src='assets/sounds/baseball-bat-hit-sound-effect.mp3';
+      turn.load();
+      turn.play();
+    }
     this.Count++;
     card.classList.toggle('show');
     front.classList.toggle('hide');
@@ -36,6 +43,12 @@ export class ExpertLevelComponent implements OnInit {
         this.cardArray.length = 0;
         this.cardFlipArray.length=0;
       } else {
+        if(sound.checked){
+          let hooray = new Audio();
+          hooray.src='assets/sounds/Tada-sound.mp3';
+          hooray.load();
+          hooray.play();
+        }
         document.getElementById('hooray')!.innerHTML+='Yay! Those cards match!' + '<br>'
         this.cardFlipArray[0]?.classList.add('matched');
         this.cardFlipArray[2]?.classList.add('matched');
@@ -85,6 +98,12 @@ export class ExpertLevelComponent implements OnInit {
   
 
   if(this.pairs === 0){
+    if(sound.checked){
+      let cheer = new Audio();
+      cheer.src='assets/sounds/CrowdCheer.mp3';
+      cheer.load();
+      cheer.play();
+      }
     window.alert('Hooray! You\'ve won! Refresh the browser to restart the game.')
     document.getElementById('score')!.innerHTML='Your final score is:  ' + (this.score + this.CheatCount) + '<br>' +
     '(A perfect score would be 0) '
