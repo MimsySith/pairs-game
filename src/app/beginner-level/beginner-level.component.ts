@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { beginnerCards } from '../cards';
 
 @Component({
@@ -16,15 +17,25 @@ export class BeginnerLevelComponent implements OnInit {
   cardFlipArray = new Array;
   score = -12;
   pairs = 12;
+  soundOn = document.getElementById('sound');
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggle(card: HTMLImageElement, front: HTMLImageElement, url: string){
-    
+ 
+
+  toggle(card: HTMLImageElement, front: HTMLImageElement, url: string, sound: HTMLInputElement){
+    if(sound.checked){
+      let turn = new Audio();
+      turn.src='assets/sounds/BeltHit.mp3';
+      turn.load();
+      turn.play();
+    }
     this.Count++;
+    
+    
     card.classList.toggle('show');
     front.classList.toggle('hide');
     this.cardArray.push(url);
@@ -85,6 +96,12 @@ export class BeginnerLevelComponent implements OnInit {
   
 
   if(this.pairs === 0){
+    if(sound.checked){
+    let cheer = new Audio();
+    cheer.src='assets/sounds/CrowdCheer.mp3';
+    cheer.load();
+    cheer.play();
+    }
     window.alert('Hooray! You\'ve won! Refresh the browser to restart the game.')
     document.getElementById('score')!.innerHTML='Your final score is:  ' + (this.score + this.CheatCount) + '<br>' +
     '(A perfect score would be 0) '
