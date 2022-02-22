@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+.text{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.card-front{
+    border: 2px solid #000000;
+}
+
+.card-back{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.matched{
+    display: block;
+}
+
+.matched-front{
+    display: none;
+}

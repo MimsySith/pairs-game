@@ -1,1 +1,17 @@
-<p>beginner-level works!</p>
+
+<div class="container">
+    <div class="row">
+        <h1 class="text">Beginner Level!</h1>
+    </div>    
+    <div class="row">
+        <table class="table">
+            <caption class="text">Turn over the cards!</caption>
+            <tr>
+                <td class="clickable" tabindex="0" (click)="toggle(cell1, cell1front, cell1.src)">
+                    <img class="card-front" src="assets/card-front.png" alt="front of card" #cell1front>
+                    <img class="card-back" [src]="Cards[0].pictureurl" alt="Card one picture" #cell1 width="100px" height="100px">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

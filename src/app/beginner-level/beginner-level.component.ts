@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { beginnerCards } from '../cards';
 
 @Component({
   selector: 'app-beginner-level',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BeginnerLevelComponent implements OnInit {
 
+  Cards = beginnerCards
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  toggle(card: HTMLImageElement, front: HTMLImageElement, url: string){
+    card.classList.toggle('show');
+    front.classList.toggle('hide')
+  }
 }
