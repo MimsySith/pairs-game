@@ -10,9 +10,12 @@ export class BeginnerLevelComponent implements OnInit {
 
   Cards = beginnerCards;
   Count = 0;
+  CheatCount = 0;
   newArray = this.shuffle([...this.Cards])
   cardArray = new Array;
   cardFlipArray = new Array;
+  score = 12;
+  pairs = 12;
 
   constructor() { }
 
@@ -20,6 +23,7 @@ export class BeginnerLevelComponent implements OnInit {
   }
 
   toggle(card: HTMLImageElement, front: HTMLImageElement, url: string){
+    
     this.Count++;
     card.classList.toggle('show');
     front.classList.toggle('hide');
@@ -38,26 +42,27 @@ export class BeginnerLevelComponent implements OnInit {
         this.cardFlipArray[5]?.classList.remove('hide');
         this.cardFlipArray[6]?.classList.remove('show');
         this.cardFlipArray[7]?.classList.remove('hide');
+        this.pairs--;
       }
 
       
       }
 
       if(this.Count>2){
-        document.getElementById('cheat')!.innerHTML="HEY! Only two cards at a time" + "<br>" + "Don't cheat."
+        this.CheatCount++;
+        document.getElementById('cheat')!.innerHTML="Amount of cheating attempts:  " + this.CheatCount;
         this.cardFlipArray[0]?.classList.remove('show');
         this.cardFlipArray[1]?.classList.remove('hide');
         this.cardFlipArray[2]?.classList.remove('show');
         this.cardFlipArray[3]?.classList.remove('hide');
         this.cardFlipArray[4]?.classList.remove('show');
         this.cardFlipArray[5]?.classList.remove('hide');
-        this.cardFlipArray[6]?.classList.remove('show');
-        this.cardFlipArray[7]?.classList.remove('hide');
+        window.alert('HEY! Only two cards at a time. No cheating!')
       }
-    
+      
 
     if(this.Count === 2){
-
+      this.score--;
       setTimeout(() => {
         this.cardFlipArray[0]?.classList.remove('show');
         this.cardFlipArray[1]?.classList.remove('hide');
@@ -71,11 +76,15 @@ export class BeginnerLevelComponent implements OnInit {
         this.Count = 0;
         this.cardArray.length = 0;
         this.cardFlipArray.length=0;
-        document.getElementById('cheat')!.innerHTML=''
-      }, 1000); 
+        }, 800);  
+  }
 
-     
+  
 
+  if(this.pairs === 0){
+    window.alert('Hooray! You\'ve won! Refresh the browser to restart the game.')
+    document.getElementById('score')!.innerHTML='Your final score is (with a higher score being better):  ' + (this.score - this.CheatCount) + '<br>' +
+    '(A perfect score would be 0) '
   }
 }
 
