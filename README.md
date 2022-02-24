@@ -20,7 +20,7 @@ I do not anticipate there being a particular group or demographic who will use a
 
 Like I usually do, I did all the planning for this app with a pen/coloured pencils and paper. I find it less frustrating and more intuitive than using an online service such as Balsmiq or Figma. First I wrote out what I intended the game to do, and possible steps that would need to be taken. Then I worked out a basic design. Then I wrote out possible functions that would be required, and other business logic.
 
-As I suspect happens with many projects, the plan design changed organically as I went and as I realised what would and wouldn't work practically.
+As I suspect happens with many projects, the plan design changed organically as I went and as I realised what would and wouldn't work practically. I have kept the UI very simple and clean.
 
 My decision to use Angular 13 for this project was due to "the devil you know". Although Angular in known to have a steep learning curve when compared to other frameworks, I had already made quite a bit of progress on a personal project using Angular, so decided to stick with it for this assignment.
 
@@ -72,7 +72,37 @@ I would like to keep this application very simple, but there are a number of thi
 
 I relied heavily on console.log() and Chrome's Developer Tools to get me out of sticky situations where I wasn't sure why things weren't working. 
 
-It is really, really difficult to use things like HTML and JavaScript validator services when everything is in different, interdependent modules (not to mention that fact that Angular extends HTML so syntax that is in fact correct can show up as wrong).
+It is really, really difficult to use things like HTML and JavaScript validator services when everything is in different, interdependent modules (not to mention that fact that Angular extends HTML so syntax that is in fact correct can show up as wrong). I couldn't find an Angular specific validator.
+
+I have myself played all levels in the game, and got some guinea pigs to do the same. They didn't want to stop playing so I could get back to work, which I take as a good sign. <br>
+One thing that did come up is the cheating failsafe (which stops people from turning over more than two cards at once) works a little too well, which can be annoying.
 
 
+## Problems encountered and solved (or not)
 
+- **Array shuffling**:  I came up with a very clumsy method of shuffling the array of cards using Math.random(), but it was inefficient and inconsistent. I turned to the internet for help and found the Fisher-Yates algorithm for shuffling arrays. I used that. The other issue I had with array shuffling is that initially, I was going to use one card in the array for each pair and then double them. The logic of this quickly proved flawed - with the array shuffling, if you don't have all cards as different, then you end up with three of one card and none of another when you shuffle them. I then just created two of each card as seperate array items.
+
+- **Comparing matching cards**:  This is related to the array shuffling problem. How do I get the program to recognise that two different objects in an array are actually the same? This was pretty easy to solve, however, as the underlying url source was always going to be the same for both. So instead of comparing the objects themselves, I compared the sources each card image was linked to.
+
+- **Keeping matched cards face up**:  This also was a minor issue that didn't take long to solve. I just added a "matched" class to the matched cards that was at the bottom of the cascade in CSS, which assured it would override the toggled "show" and "hide" classes.
+
+- **Turning back unmatched cards**:  Althought this seemed simple, it threw up associated problems. I used a setTimeout() function to delay the cards toggling back to hide when two had been turned over. But because it worked asynchronously (the next function would be processed before the timeout had finished) I ended up with the arrays returning empty, as the next function emptied the arrays ready for the next turn. Which meant when the cards turned over, they couldn't be matched because there were no entries in the "matched" arrays to match. So I tried using a promise, but the promise function overshadowed the array so it couldn't be accessed. I think I should have used an Observable, but I had such a headache trying to set it up I went for plan B, which was to put all relevent instructions sequentially within the timeout function itself.
+
+- **Adding keyboard navigation**:  I still haven't figured this one out. Angular makes it difficult - a lot of the old methods are deprecated, and there are some problems with using jQuery in TypeScript files. It is possible, but I haven't figured it out yet.
+
+## Credits
+
+It's important to credit the creators of the SVG icons, so many thanks to 
+- Lorc, http://lorcblog.blogspot.com
+- Carl Olsen, https://twitter.com/unstoppableCarl
+- Willdabeast, http://wjbstories.blogspot.com
+- Viscious Speed, http://viscious-speed.deviantart.com - CC0
+- Faithtoken, http://fungustoken.deviantart.com
+- Andy Meneely, http://www.se.rit.edu/~andy/
+- Kier Heyl
+- Rihsuhl
+- Catsu 
+
+Thanks also to the people at Free Sounds Library for providing the sound effects.
+
+Thanks to [Stack Overflow](https://stackoverflow.com/) for the basic information on how to create audio in Angular
