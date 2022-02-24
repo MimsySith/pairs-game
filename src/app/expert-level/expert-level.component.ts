@@ -130,4 +130,7 @@ export class ExpertLevelComponent implements OnInit {
 
   };
 
+  newGame(){
+    window.location.reload()
+    }
 }

@@ -16,6 +16,7 @@ export class IntermediateLevelComponent implements OnInit {
   cardFlipArray = new Array;
   score = -24;
   pairs = 24;
+  key = KeyboardEvent
 
   constructor() { }
 
@@ -23,6 +24,7 @@ export class IntermediateLevelComponent implements OnInit {
   }
 
   toggle(card: HTMLImageElement, front: HTMLImageElement, url: string, sound: HTMLInputElement){
+    
     if(sound.checked){
       //Thanks to Stack Overflow for the method of playing sound in Angular, as it
       //is slightly different to the method in plain JavaScript
@@ -129,5 +131,9 @@ export class IntermediateLevelComponent implements OnInit {
       return newArray;
 
   };
+
+  newGame(){
+    window.location.reload()
+    }
 
 }

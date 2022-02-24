@@ -3,14 +3,13 @@
     <div class="row">
         <h1 class="text beginner">Beginner Level!</h1>
     </div> 
-    <label for="sound">Turn sound effects on?</label>   
-    <input  name="sound" type="checkbox" id="sound" #sound>
-    <div class="row">
-        <p id="score" class="text score"></p>
-    </div>    
-        <div class="row">
+    <label class="text large bold" for="sound">Turn sound effects on?</label>   
+    <input class="sound"  name="sound" type="checkbox" id="sound" #sound>
+    <button type="button" class="button" (click)="newGame()">New Game</button>
+    <h1 id="cheat" class="text cheat"></h1>
+            <div class="row">
             <table class="table">
-                <caption class="text">Turn over the cards!</caption>
+                <caption class="text large bold">Turn over the cards!</caption>
                 <tr>
                     <td class="clickable" tabindex="0" (click)="toggle(cell1, cell1front, cell1.src, sound)">
                         <img class="card-front" src="assets/card-front.png" alt="front of card" #cell1front>
@@ -113,12 +112,10 @@
                         <img class="card-back border" [src]="newArray[23].pictureurl" alt="Card one picture" #cell24 width="100px" height="100px">
                     </td>
                 </tr>
-            </table>
-            <h1 id="cheat" class="text cheat"></h1>
+            </table>         
         </div>
-    
-    <div class="row">
-        <p class="text hooray" id="hooray"></p>
-    </div>
+        <div class="row">
+            <p class="text hooray large" id="hooray"></p>
+        </div>
 </div>
     

@@ -30,13 +30,12 @@ Making this project a Single Page Application (SPA) was a no-brainer. It would h
 
 ## Features
 
-I have included a number of features in this game, including:
+I have included a few features in this game, including:
 
 - Optional sound effects which are turned off by default
 - A scoring system based on golf (and why not?)
-- Keyboard navigation
 - Different difficulty levels
-- An option for a time limit to "play against the clock"
+
 
 
 
@@ -47,6 +46,8 @@ I would like to keep this application very simple, but there are a number of thi
 1. Better sound effects. The open source sound effects I found are a bit tacky and annoying
 2. More professional styling. This is something I really struggle with - I am not good at designing pretty things by nature
 3. A single Angular Service for commonly resused logic. This is something you are supposed to do in Angular using Observables, but I was having difficulty with Observables so put all logic in Component .ts files. I have to work on this.
+4. Keyboard navigation. I am not sure how to approach this in Angular, but I'm working on it
+5. An option for a time limit to "play against the clock"
 
 
 

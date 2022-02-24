@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵɵqueryRefresh } from '@angular/core';
+import { Observable, Observer, repeat, timer } from 'rxjs';
+
 
 import { beginnerCards } from '../cards';
+
 
 @Component({
   selector: 'app-beginner-level',
@@ -18,13 +21,19 @@ export class BeginnerLevelComponent implements OnInit {
   score = -12;
   pairs = 12;
   soundOn = document.getElementById('sound');
+  timerButton = document.getElementById('timer');
+  startTime = 180
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
  
+  
+   
+  
 
   toggle(card: HTMLImageElement, front: HTMLImageElement, url: string, sound: HTMLInputElement){
     if(sound.checked){
@@ -132,6 +141,10 @@ export class BeginnerLevelComponent implements OnInit {
       return newArray;
 
   };
+
+  newGame(){
+  window.location.reload()
+  }
 }
 
 

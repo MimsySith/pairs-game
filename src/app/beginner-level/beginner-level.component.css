@@ -4,3 +4,14 @@
     border: 2px solid #000000;
     border-radius: 5px;
 }
+
+.hooray{
+    background-color: #006400;
+    color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.button{
+    width: fit-content;
+}

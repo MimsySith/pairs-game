@@ -2,8 +2,9 @@
     <div class="row">
         <h1 class="text expert">Expert Level!</h1>
     </div>    
-    <label for="sound">Turn sound effects on?</label>   
-    <input  name="sound" type="checkbox" id="sound" #sound>
+    <label class="text large bold" for="sound">Turn sound effects on?</label>   
+    <input class="sound" name="sound" type="checkbox" id="sound" #sound>
+    <button type="button" class="button" (click)="newGame()">New Game</button>
     <div class="row">
         <p id="score" class="text score"></p>
     </div>    
@@ -13,7 +14,7 @@
 
     <div class="row">
         <table class="table">
-            <caption class="text">Turn over the cards!</caption>
+            <caption class="text large bold">Turn over the cards!</caption>
             <tr>
                 <td class="clickable" tabindex="0" (click)="toggle(cell1, cell1front, cell1.src, sound)">
                     <img class="card-front" src="assets/expert-card.png" alt="front of card" #cell1front width="70px" height="70px">

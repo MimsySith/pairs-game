@@ -6,6 +6,10 @@
     font-weight: bold;
 }
 
+.large{
+    font-size: 14pt;
+}
+
 .score{
     font-size: 16pt;
 }
@@ -61,4 +65,17 @@
 
 .cheat{
     color: #ff0000;
+}
+
+.sound{
+    height: 20px;
+    width: 20px;
+    margin: 2px;
+}
+
+.button{
+    font-size: 14pt;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: fit-content;
 }
