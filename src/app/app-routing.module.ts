@@ -6,7 +6,7 @@ import { ExpertLevelComponent } from './expert-level/expert-level.component';
 import { IntermediateLevelComponent } from './intermediate-level/intermediate-level.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: EntryPageComponent},
   {path: 'beginner', component: BeginnerLevelComponent},
   {path: 'intermediate', component: IntermediateLevelComponent},
