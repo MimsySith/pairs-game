@@ -90,6 +90,10 @@ One thing that did come up is the cheating failsafe (which stops people from tur
 
 - **Adding keyboard navigation**:  I still haven't figured this one out. Angular makes it difficult - a lot of the old methods are deprecated, and there are some problems with using jQuery in TypeScript files. It is possible, but I haven't figured it out yet.
 
+- **Deployment to GitHub Pages**: Oh, what a headache. GitHub pages does not like Angular apps much, it seems. I got the main pages to work briefly, but the images weren't showing. When I tried to fix that, the whole page broke again. I think
+it is an issue with GitHub not liking relative paths. Anyway, I have fiddled with the urls and changed the base href. Just
+waiting to see if this works.
+
 ## Credits
 
 It's important to credit the creators of the SVG icons, so many thanks to 
