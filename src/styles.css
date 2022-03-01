@@ -80,3 +80,38 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: fit-content;
 }
+
+.only-when{
+    display: none;
+}
+
+@media  screen and (max-width: 1000px) {
+    .card-back,
+    .card-front{
+        width: 70px;
+        height: 70px;
+    }
+    .score{
+        font-size: 14pt;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .card-front,
+    .card-back{
+        width: 60px;
+        height: 60px;
+    }
+
+    .score,
+    .large{
+        font-size: 12pt;
+    }
+
+    .only-when{
+        display: block;
+    }
+
+
+    
+}
