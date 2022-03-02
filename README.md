@@ -95,7 +95,7 @@ it is an issue with GitHub not liking relative paths. Anyway, I have fiddled wit
 waiting to see if this works.
 UPDATE: Yes it did.
 
--**Screen Freezing when using Sound Effects on Mobile Phone**: I think this is because Angular is quite a memory intensive framework, so when you add sound effects to everything else, it takes too long to process all the JavaScript and the screen
+- **Screen Freezing when using Sound Effects on Mobile Phone**: I think this is because Angular is quite a memory intensive framework, so when you add sound effects to everything else, it takes too long to process all the JavaScript and the screen
 momentarily freezes. This is solveable, I believe, by making the code more efficient. Something to look into. It is not a problem on computers or tablets - I have tested on all device types.
 
 ## Credits
