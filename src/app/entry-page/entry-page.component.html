@@ -1,31 +1,31 @@
 <main class="container">
-   <section class="container">
-    <div class="row">
+    <section class="container">
+      <div class="row">
         <h1 class="text header centre">Instructions:</h1>
-    </div>
-    <div class="row">
+      </div>
+      <div class="row">
         <p class="text">This is a game of memory. A selection of cards are presented to you, face down. You turn over the cards
-            two at a time by clicking on them. If the cards match, they will remain face up. If not, they will turn over again. 
+            two at a time by clicking on them. If the cards match, they will remain face up. If not, they will turn over again.
             You have to remember where the cards are in order to match them. To win, all the cards need to be matched and therefore face up.<br>
             There are three levels. Beginner has 12 different pairs, Intermediate has 24 different pairs, and Advanced has
             36 different pairs.<br><br>
-            The scoring works like golf - you are aiming for the lowest score possible. A perfect score would be 0. It is 
+            The scoring works like golf - you are aiming for the lowest score possible. A perfect score would be 0. It is
             nearly impossible to achieve a 0, but keep trying!
         </p>
-    </div>
-   </section> 
-   <section class="container">
-    <div class="row">
-            <h2 class="text header centre">And here are the cards:</h2>
-    </div>
-    
-    <div class="row">
+      </div>
+    </section>
+    <section class="container">
+      <div class="row">
+          <h2 class="text header centre">And here are the cards:</h2>
+      </div>
+
+      <div class="row">
         <div *ngFor="let card of Cards">
             <div class="border" tabindex="0">
                 <p class="text small">{{card.name}}</p>
                 <img class="card" src={{card.pictureurl}} alt="Card" height="70px" width="70px">
             </div>
         </div>
-    </div>
-</section> 
+      </div>
+    </section>
 </main>

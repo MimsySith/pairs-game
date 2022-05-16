@@ -3,121 +3,121 @@
     <p class="only-when text">Try turning your device on its side</p>
     <div class="row">
         <h1 class="text beginner">Beginner Level!</h1>
-    </div> 
-    <label class="text large bold" for="sound">Turn sound effects on?</label>   
+    </div>
+    <label class="text large bold" for="sound">Turn sound effects on?</label>
     <input class="sound"  name="sound" type="checkbox" id="sound" #sound>
     <button type="button" class="button" (click)="newGame()">New Game</button>
     <h1 id="cheat" class="text cheat"></h1>
     <h3 class="text" id="score"></h3>
-            <div class="row">
-            <table class="table">
-                <caption class="text large bold">Turn over the cards!</caption>
-                <tr>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell1, cell1front, cell1.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell1front>
-                        <img class="card-back border" [src]="newArray[0].pictureurl" [alt]="newArray[0].alt" #cell1 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell2, cell2front, cell2.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell2front>
-                        <img class="card-back border" [src]="newArray[1].pictureurl" [alt]="newArray[1].alt" #cell2 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell3, cell3front, cell3.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell3front>
-                        <img class="card-back border" [src]="newArray[2].pictureurl" [alt]="newArray[2].alt" #cell3 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell4, cell4front, cell4.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell4front>
-                        <img class="card-back border" [src]="newArray[3].pictureurl" [alt]="newArray[3].alt" #cell4 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell5, cell5front, cell5.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell5front>
-                        <img class="card-back border" [src]="newArray[4].pictureurl" [alt]="newArray[4].alt" #cell5 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell6, cell6front, cell6.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell6front>
-                        <img class="card-back border" [src]="newArray[5].pictureurl" [alt]="newArray[5].alt" #cell6 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell7, cell7front, cell7.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell7front>
-                        <img class="card-back border" [src]="newArray[6].pictureurl" [alt]="newArray[6].alt" #cell7 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell8, cell8front, cell8.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell8front>
-                        <img class="card-back border" [src]="newArray[7].pictureurl" [alt]="newArray[7].alt" #cell8 width="100px" height="100px">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell9, cell9front, cell9.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell9front>
-                        <img class="card-back border" [src]="newArray[8].pictureurl" [alt]="newArray[8].alt" #cell9 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell10, cell10front, cell10.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell10front>
-                        <img class="card-back border" [src]="newArray[9].pictureurl" [alt]="newArray[9].alt" #cell10 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell11, cell11front, cell11.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell11front>
-                        <img class="card-back border" [src]="newArray[10].pictureurl" [alt]="newArray[10].alt" #cell11 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell12, cell12front, cell12.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell12front>
-                        <img class="card-back border" [src]="newArray[11].pictureurl" [alt]="newArray[11].alt" #cell12 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell13, cell13front, cell13.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell13front>
-                        <img class="card-back border" [src]="newArray[12].pictureurl" [alt]="newArray[12].alt" #cell13 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell14, cell14front, cell14.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell14front>
-                        <img class="card-back border" [src]="newArray[13].pictureurl" [alt]="newArray[13].alt" #cell14 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell15, cell15front, cell15.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell15front>
-                        <img class="card-back border" [src]="newArray[14].pictureurl" [alt]="newArray[14].alt" #cell15 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell16, cell16front, cell16.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell16front>
-                        <img class="card-back border" [src]="newArray[15].pictureurl" [alt]="newArray[15].alt" #cell16 width="100px" height="100px">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell17, cell17front, cell17.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell17front>
-                        <img class="card-back border" [src]="newArray[16].pictureurl" [alt]="newArray[16].alt" #cell17 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell18, cell18front, cell18.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell18front>
-                        <img class="card-back border" [src]="newArray[17].pictureurl" [alt]="newArray[17].alt" #cell18 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell19, cell19front, cell19.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell19front>
-                        <img class="card-back border" [src]="newArray[18].pictureurl" [alt]="newArray[18].alt" #cell19 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell20, cell20front, cell20.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell20front>
-                        <img class="card-back border" [src]="newArray[19].pictureurl" [alt]="newArray[19].alt" #cell20 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell21, cell21front, cell21.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell21front>
-                        <img class="card-back border" [src]="newArray[20].pictureurl" [alt]="newArray[20].alt" #cell21 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell22, cell22front, cell22.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell22front>
-                        <img class="card-back border" [src]="newArray[21].pictureurl" [alt]="newArray[21].alt" #cell22 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell23, cell23front, cell23.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell23front>
-                        <img class="card-back border" [src]="newArray[22].pictureurl" [alt]="newArray[22].alt" #cell23 width="100px" height="100px">
-                    </td>
-                    <td class="clickable" tabindex="0" (click)="toggle(cell24, cell24front, cell24.src, sound)">
-                        <img class="card-front" src="assets/card-front.png" alt="front of card" #cell24front>
-                        <img class="card-back border" [src]="newArray[23].pictureurl" [alt]="newArray[23].alt" #cell24 width="100px" height="100px">
-                    </td>
-                </tr>
-            </table>         
-        </div>
-        <div class="row">
-            <p class="text hooray large" id="hooray"></p>
-        </div>
-    </main>
-    
+      <div class="row">
+        <table class="table">
+          <caption class="text large bold">Turn over the cards!</caption>
+            <tr>
+              <td class="clickable" tabindex="0" (click)="toggle(cell1, cell1front, cell1.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell1front>
+                  <img class="card-back border" [src]="newArray[0].pictureurl" [alt]="newArray[0].alt" #cell1 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell2, cell2front, cell2.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell2front>
+                  <img class="card-back border" [src]="newArray[1].pictureurl" [alt]="newArray[1].alt" #cell2 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell3, cell3front, cell3.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell3front>
+                  <img class="card-back border" [src]="newArray[2].pictureurl" [alt]="newArray[2].alt" #cell3 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell4, cell4front, cell4.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell4front>
+                  <img class="card-back border" [src]="newArray[3].pictureurl" [alt]="newArray[3].alt" #cell4 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell5, cell5front, cell5.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell5front>
+                  <img class="card-back border" [src]="newArray[4].pictureurl" [alt]="newArray[4].alt" #cell5 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell6, cell6front, cell6.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell6front>
+                  <img class="card-back border" [src]="newArray[5].pictureurl" [alt]="newArray[5].alt" #cell6 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell7, cell7front, cell7.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell7front>
+                  <img class="card-back border" [src]="newArray[6].pictureurl" [alt]="newArray[6].alt" #cell7 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell8, cell8front, cell8.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell8front>
+                  <img class="card-back border" [src]="newArray[7].pictureurl" [alt]="newArray[7].alt" #cell8 width="100px" height="100px">
+              </td>
+            </tr>
+            <tr>
+              <td class="clickable" tabindex="0" (click)="toggle(cell9, cell9front, cell9.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell9front>
+                  <img class="card-back border" [src]="newArray[8].pictureurl" [alt]="newArray[8].alt" #cell9 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell10, cell10front, cell10.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell10front>
+                  <img class="card-back border" [src]="newArray[9].pictureurl" [alt]="newArray[9].alt" #cell10 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell11, cell11front, cell11.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell11front>
+                  <img class="card-back border" [src]="newArray[10].pictureurl" [alt]="newArray[10].alt" #cell11 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell12, cell12front, cell12.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell12front>
+                  <img class="card-back border" [src]="newArray[11].pictureurl" [alt]="newArray[11].alt" #cell12 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell13, cell13front, cell13.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell13front>
+                  <img class="card-back border" [src]="newArray[12].pictureurl" [alt]="newArray[12].alt" #cell13 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell14, cell14front, cell14.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell14front>
+                  <img class="card-back border" [src]="newArray[13].pictureurl" [alt]="newArray[13].alt" #cell14 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell15, cell15front, cell15.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell15front>
+                  <img class="card-back border" [src]="newArray[14].pictureurl" [alt]="newArray[14].alt" #cell15 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell16, cell16front, cell16.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell16front>
+                  <img class="card-back border" [src]="newArray[15].pictureurl" [alt]="newArray[15].alt" #cell16 width="100px" height="100px">
+              </td>
+            </tr>
+            <tr>
+              <td class="clickable" tabindex="0" (click)="toggle(cell17, cell17front, cell17.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell17front>
+                  <img class="card-back border" [src]="newArray[16].pictureurl" [alt]="newArray[16].alt" #cell17 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell18, cell18front, cell18.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell18front>
+                  <img class="card-back border" [src]="newArray[17].pictureurl" [alt]="newArray[17].alt" #cell18 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell19, cell19front, cell19.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell19front>
+                  <img class="card-back border" [src]="newArray[18].pictureurl" [alt]="newArray[18].alt" #cell19 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell20, cell20front, cell20.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell20front>
+                  <img class="card-back border" [src]="newArray[19].pictureurl" [alt]="newArray[19].alt" #cell20 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell21, cell21front, cell21.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell21front>
+                  <img class="card-back border" [src]="newArray[20].pictureurl" [alt]="newArray[20].alt" #cell21 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell22, cell22front, cell22.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell22front>
+                  <img class="card-back border" [src]="newArray[21].pictureurl" [alt]="newArray[21].alt" #cell22 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell23, cell23front, cell23.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell23front>
+                  <img class="card-back border" [src]="newArray[22].pictureurl" [alt]="newArray[22].alt" #cell23 width="100px" height="100px">
+              </td>
+              <td class="clickable" tabindex="0" (click)="toggle(cell24, cell24front, cell24.src, sound)">
+                  <img class="card-front" src="assets/card-front.png" alt="front of card" #cell24front>
+                  <img class="card-back border" [src]="newArray[23].pictureurl" [alt]="newArray[23].alt" #cell24 width="100px" height="100px">
+              </td>
+            </tr>
+        </table>
+      </div>
+      <div class="row">
+          <p class="text hooray large" id="hooray"></p>
+      </div>
+</main>
+
