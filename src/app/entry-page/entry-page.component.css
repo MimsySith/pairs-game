@@ -6,8 +6,9 @@
 
 .border{
     border: 1px solid #000000;
-    width: fit-content;
+    width: 100%;
     height: 165px;
+    overflow-wrap: normal;
     }
 
 .small{
@@ -18,7 +19,7 @@
 .card{
     margin: 10px;
     width: 100%;
-    overflow: wrap;
+    overflow-wrap: normal;
 }
 
 .centre{
